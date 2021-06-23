@@ -1,7 +1,7 @@
 import "./Intro.scss";
 import { useEffect, useRef } from "react";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { inheritInnerComments } from "@babel/types";
+
 import { init } from 'ityped';
 const Intro = () => {
     const textRef = useRef();
@@ -15,7 +15,7 @@ const Intro = () => {
         <div className="intro" id="intro">
         <div className="left">
             <div className="imgContainer">
-                <img src="assets/1.png" alt="Avatar"></img>
+                <img src="assets/yanal.png" alt="Avatar"></img>
             </div>
         </div>
         <div className="right">
