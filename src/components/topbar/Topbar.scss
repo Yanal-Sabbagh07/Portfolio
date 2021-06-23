@@ -24,6 +24,8 @@
                 font-weight: 700;
                 text-decoration: none;
                 margin-right: 40px;
+                color: $mainColor;
+                transition: all 1.2s ease;
             }
             .itemContainer{
                 display: flex;
@@ -63,6 +65,14 @@
     &.active{
         background-color: $mainColor ;
         color: #fff;
+
+        .wrapper{
+            .left{
+                .logo{
+                    color:#fff;
+                }
+            }
+        }
 
         .ham{
             span{

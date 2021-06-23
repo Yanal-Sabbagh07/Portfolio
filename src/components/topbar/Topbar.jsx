@@ -6,8 +6,8 @@ const Topbar = (props) => {
     return (
         <div className={"topbar " + (props.menu && "active")}>
             <div className="wrapper">
-                <div className="left">
-                    <a href="#intro" className="logo">Logo...</a>
+                <div className="left"> 
+                    <a href="#intro" className="logo">Yanal</a>
                     <div className="itemContainer">
                     <Person className="icon"/>
                     <span>+49 15732 1177 24</span>
