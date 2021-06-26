@@ -29,7 +29,7 @@ const Portfolio = () => {
                             <div className="leftContainer">
                                 
                                 <h2 
-                                style={currentSlide ===0 ? {color:"orange"} :
+                                style={currentSlide === 0 ? {color:"orange"} :
                                 currentSlide===1 ? {color:"green"} :
                                 currentSlide===2 ? {color:"red"} :
                                 {color:"yellow"}} >
