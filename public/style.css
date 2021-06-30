@@ -1,11 +1,10 @@
 * {
-    margin: 0;
-    
-    
-    font-family: 'Roboto Slab', serif;
-    /* font-size: 62.5%; */
+  margin: 0;
+  overflow: hidden;
+  font-family: "Roboto Slab", serif;
+  /* font-size: 62.5%; */
 }
-body{
-    padding:0;
-    box-sizing: border-box;
+body {
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -1,7 +1,38 @@
 $mainColor: #590995;
-$secondaryColor:#8f00ff;
-$secondary: #C62A88;
-$lighterBlue:#BBE1FA;
-$darkBlue:#9900cc;
-$darkerBlue: #1B262C;
+$secondaryColor: #8f00ff;
+$secondary: #c62a88;
+$lighterBlue: #bbe1fa;
+$darkBlue: #9900cc;
+$darkerBlue: #1b262c;
 
+$width: 1450px;
+$miniWidth: 1280px;
+$bigTab: 1024px;
+$tablet: 768px;
+$mobile: 450px;
+
+@mixin laptop {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+@mixin miniLaptop {
+  @media (max-width: #{$miniWidth}) {
+    @content;
+  }
+}
+@mixin bigTablet {
+  @media (max-width: #{$bigTab}) {
+    @content;
+  }
+}
+@mixin Tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin Mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}

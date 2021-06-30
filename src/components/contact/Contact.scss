@@ -1,6 +1,127 @@
 @import "../../global.scss";
-.contact{
-    background-color: $mainColor;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+.contact {
+  background-color: #fff;
+  //background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  display: flex;
+  @include Mobile {
+    flex-direction: column;
+  }
+  .left {
+    flex: 0.55;
+    @include Tablet {
+      display: none;
+    }
+    @include Mobile {
+      display: flex;
+      flex: 0.4;
+      align-items: center;
+      justify-content: center;
+    }
 
+    img {
+      height: 100%;
+    }
+  }
+  .right {
+    flex: 0.45;
+    @include Tablet {
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+    }
+    @include Mobile {
+      flex: 0.6;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    h2 {
+      @include laptop {
+        font-size: 40px;
+      }
+      font-size: 60px;
+      color: $secondaryColor;
+    }
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      @include Tablet {
+        align-items: center;
+      }
+      input {
+        @include laptop {
+          font-size: 16px;
+        }
+
+        @include bigTablet {
+          width: 250px;
+        }
+        @include Tablet {
+          width: 350px;
+        }
+        @include Mobile {
+          width: 75%;
+          margin-bottom: 10px;
+        }
+        width: 350px;
+        height: 40px;
+        font-size: 18px;
+        border-color: $secondaryColor;
+        border-radius: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        @include bigTablet {
+          width: 250px;
+        }
+        @include Tablet {
+          width: 350px;
+        }
+        @include Mobile {
+          width: 75%;
+          margin-bottom: 10px;
+          height: 90px;
+        }
+        width: 350px;
+        height: 160px;
+        font-size: 18px;
+        border-color: $secondaryColor;
+        border-radius: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        @include bigTablet {
+          width: 250px;
+        }
+        @include Tablet {
+          width: 150px;
+        }
+        width: 175px;
+        height: 35px;
+        font-size: 18px;
+        color: #fff;
+        background-color: $secondaryColor;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      span {
+        color: #54e346;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
 }

@@ -1,136 +1,239 @@
 @import "../../global.scss";
-.portfolio{
-    background-color: $mainColor;
+.portfolio {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include Mobile {
+    flex-direction: column;
+  }
+
+  .portfolioHeader {
+    position: absolute;
+    top: 30px;
+    color: #fff;
+    font-size: 24px;
+    @include laptop {
+      top: 20px;
+      font-size: 20px;
+    }
+    @include Tablet {
+      top: 100px;
+      font-size: 20px;
+    }
+    @include Mobile {
+      top: 10px;
+      font-size: 16px;
+    }
+  }
+
+  .arrow {
+    @include laptop {
+      font-size: 125px;
+    }
+    font-size: 150px;
+    font-weight: 300;
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    @include Mobile {
+      display: none;
+    }
+    &.left {
+      @include laptop {
+        left: 250px;
+      }
+      @include miniLaptop {
+        left: 200px;
+      }
+      @include bigTablet {
+        left: 100px;
+      }
+      @include Tablet {
+        left: 50px;
+      }
+      left: 300px;
+    }
+    &.right {
+      right: 300px;
+      @include laptop {
+        right: 250px;
+      }
+      @include miniLaptop {
+        right: 200px;
+      }
+      @include bigTablet {
+        right: 100px;
+      }
+      @include Tablet {
+        right: 50px;
+      }
+    }
+  }
+
+  .slider {
+    @include laptop {
+      height: 320px;
+    }
+    @include Mobile {
+      height: 600px;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    height: 450px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include Mobile {
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
 
-    .portfolioHeader{
-        position: absolute;
-        top: 30px;
-        color: #fff;
-        font-size: 24px;  
-    }
-    
-
-    .arrow{
-        font-size:150px;
-        font-weight: 300;
-        position: absolute;
-        cursor: pointer;
-        color: #fff;
-        &.left{
-            left: 300px;
+      .item {
+        @include laptop {
+          width: 650px;
         }
-        &.right{
-            right: 300px;
+        @include Tablet {
+          width: 450px;
         }
-    }
-
-    .slider{
-        height: 450px ;
+        @include Mobile {
+          width: 75vw;
+          height: 100%;
+          border-radius: 15px;
+        }
+        width: 950px;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 20px;
         display: flex;
-        position: absolute;
-        left: 0;
-        transition: all 1s ease-out;
-        .container{
-            width: 100vw;
+        align-items: center;
+        justify-content: center;
+
+        .left {
+          flex: 4;
+
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+
+          .leftContainer {
+            width: 85%;
+            height: 70%;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            
-            
+            flex-direction: column;
+            justify-content: space-between;
 
-            .item{
-                width:950px;
-                height:100%;
-                background-color: #fff;
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-
-                
-                
-                .left{
-                    flex: 4;
-                    height: 80%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 20px;
-
-                    .leftContainer{
-                        width: 85%;
-                        height: 70%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        
-
-                        h2{
-                            font-size: 24px;
-                            font-weight: 500;
-                        }
-                        .btnContainer{
-                            display: flex;
-                            justify-content: space-between;
-                            
-                            .btn:link,
-                            .btn:visited{
-                                font-size: 15px;
-                                font-weight: 900;
-                                width: 40%;
-                                text-decoration: none;
-                                border-radius: 200px;
-                                -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-                                transition: background-color 0.2s, border 0.2s, color 0.2s;
-                                padding: 10px 5px;
-                                text-align: center;
-                            }
-                            .btn:link,
-                            .btn:visited{
-                                border: 1px solid $mainColor;
-                                color: $mainColor;
-                                background-color: #fff;
-                            }
-                            .btn:hover,
-                            .btn:active,
-                            .btn:focus
-                            {
-                                background-color: $secondaryColor;
-                                color: #fff;
-                            }
-
-                            
-                        }
-                        
-                    }
-
-                }
-                .right{
-                    flex:8;
-                    height: 90%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 20px;
-
-                    img{
-                        width: 85%;
-                        height: 70%;
-                        border-radius: 20px;
-                        
-                    }
-                    
-                }
-                
+            h2 {
+              font-size: 24px;
+              font-weight: 500;
+              @include laptop {
+                font-size: 22px;
+              }
+              @include Tablet {
+                font-size: 20px;
+              }
+              @include Mobile {
+                font-size: 16px;
+                margin-bottom: 10px;
+              }
             }
+            p {
+              @include laptop {
+                font-size: 14px;
+              }
+              @include Tablet {
+                font-size: 16px;
+              }
+              @include Mobile {
+                display: none;
+              }
+            }
+            .btnContainer {
+              display: flex;
+              justify-content: space-between;
+              @include Mobile {
+              }
+
+              .btn:link,
+              .btn:visited {
+                font-size: 16px;
+                font-weight: 900;
+                width: 40%;
+                text-decoration: none;
+                border-radius: 200px;
+                -webkit-transition: background-color 0.2s, border 0.2s,
+                  color 0.2s;
+                transition: background-color 0.2s, border 0.2s, color 0.2s;
+                padding: 10px 5px;
+                text-align: center;
+                @include laptop {
+                  font-size: 14px;
+                }
+                @include Tablet {
+                  font-size: 12px;
+                }
+                @include Mobile {
+                  font-size: 10px;
+                  padding: 5px;
+                }
+              }
+              .btn:link,
+              .btn:visited {
+                border: 1px solid $mainColor;
+                color: $mainColor;
+                background-color: #fff;
+              }
+              .btn:hover,
+              .btn:active,
+              .btn:focus {
+                background-color: $secondaryColor;
+                color: #fff;
+              }
+            }
+          }
         }
+        .right {
+          flex: 8;
+          height: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+          @include laptop {
+            flex: 6;
+            height: 80%;
+          }
+          @include Tablet {
+            flex: 4;
+            height: 75%;
+          }
+          @include Mobile {
+            border-radius: px;
+          }
+
+          img {
+            width: 85%;
+            height: 70%;
+            border-radius: 20px;
+          }
+          @include Mobile {
+            width: 85%;
+            height: 70%;
+            border-radius: 10px;
+          }
+        }
+      }
     }
-    
-    
+  }
 }

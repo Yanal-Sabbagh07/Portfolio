@@ -1,88 +1,121 @@
 @import "../../global.scss";
-.skills{
-    background-color: #fff;
+.skills {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //justify-content: center;
+  h1 {
+    font-size: 50px;
+    @include laptop {
+      font-size: 40px;
+    }
+    @include Mobile {
+      font-size: 24px;
+    }
+    color: $mainColor;
+  }
+  ul {
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    //justify-content: center;
-    h1{
-        font-size: 50px;
-        color: $mainColor;
+
+    @include Mobile {
+      font-size: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 15px;
+      margin-top: 25px;
     }
-    ul{
+
+    li {
+      font-size: 18px;
+      @include laptop {
+        font-size: 16px;
+      }
+      @include Mobile {
+        font-size: 20px;
         margin: 10px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        
+      }
+      margin-right: 20px;
+      padding: 7px;
+      border-radius: 15px;
+      cursor: pointer;
+      border: 1px solid $secondaryColor;
+      color: $secondaryColor;
 
-        li{
-            font-size: 18px;
-            margin-right: 20px;
-            padding: 7px;
-            border-radius: 15px;
-            cursor: pointer;
-            border: 1px solid $secondaryColor;
-            color: $secondaryColor;
-            
-            &.active{
-                background-color: $secondaryColor;
-                color:#fff;
-                transition: all .8s ease;
-            }
-        }
+      &.active {
+        background-color: $secondaryColor;
+        color: #fff;
+        transition: all 0.8s ease;
+      }
     }
-    .container{
-        width: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        flex-wrap: wrap; // when widt has been reached go to next line.
-        
-
-        .item{
-            width:250px;
-            height: 150px;
-            border-radius: 10px;
-            border: 1px solid lightgrey;
-            margin:10px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            animation: popup .7s 1 ease-in;
-        
-            h3{
-                font-size: 20px;
-               
-            }
-            img{
-                width: 25%;
-                height: 40%;
-                
-            }
-        }
-
-        @keyframes popup {
-            0%{
-                opacity: 0;
-                //transform:rotateZ(330deg);
-                transform: translateY(-150px);
-            }
-            75%{
-                opacity: .1;
-            }
-            100% {
-                opacity: 1;
-                //transform: rotateZ(360deg);
-                transform: translateY(0px);
-                
-            }
-        }
+  }
+  .container {
+    @include Mobile {
+      width: 100%;
     }
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap; // when widt has been reached go to next line.
+
+    .item {
+      @include laptop {
+        width: 150px;
+        height: 85px;
+      }
+      @include Mobile {
+        width: 75px;
+        height: 75px;
+      }
+      width: 250px;
+      height: 150px;
+      border-radius: 10px;
+      border: 1px solid lightgrey;
+      margin: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: popup 0.7s 1 ease-in;
+
+      h3 {
+        font-size: 20px;
+        @include laptop {
+          font-size: 16px;
+        }
+        @include Mobile {
+          font-size: 12px;
+        }
+      }
+      img {
+        width: 25%;
+        height: 40%;
+      }
+    }
+
+    @keyframes popup {
+      0% {
+        opacity: 0;
+        //transform:rotateZ(330deg);
+        transform: translateY(-150px);
+      }
+      75% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 1;
+        //transform: rotateZ(360deg);
+        transform: translateY(0px);
+      }
+    }
+  }
 }

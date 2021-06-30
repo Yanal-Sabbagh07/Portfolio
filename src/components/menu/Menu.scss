@@ -1,41 +1,48 @@
 @import "../../global.scss";
 .menu {
-    width: 350px;
-    height: 100vh;
-    background-color: $mainColor;
-    position: fixed;
-    top: 0;
-    right: -350px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 1s ease;
+  @include laptop {
+    width: 290px;
+  }
+  @include Mobile {
+    width: 100vw;
+    right: -100vw;
+  }
+  width: 350px;
+  height: 100vh;
+  background-color: $mainColor;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
 
-    &.active{
-        right: 0px;
+  &.active {
+    right: 0px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 32px;
+    font-weight: 300;
+    width: 40%;
+
+    li {
+      margin-bottom: 40px;
+      a {
+        font-size: inherit;
+        font-weight: inherit;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:hover {
+        font-weight: 500;
+      }
     }
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 32px;
-        font-weight: 300;
-        width: 40%;
-
-        li{
-            margin-bottom: 40px;
-            a{
-                font-size: inherit;
-                font-weight: inherit;
-                color: #fff;
-                text-decoration: none;
-            }
-
-            &:hover{
-                font-weight: 500;
-            }
-        }
-    }
+  }
 }
