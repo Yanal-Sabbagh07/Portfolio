@@ -9,7 +9,7 @@ const Intro = () => {
         init(textRef.current, { 
             showCursor: true, 
             backDelay:1500,
-            strings: ['Software Engineer', 'Freelance Web Developer', 'Former Profisional Swimmer' ] })
+            strings: ['Software Engineer', 'Freelance Web Developer', 'Former Professional Swimmer' ] })
     }, [])
     return (
         <div className="intro" id="intro">
