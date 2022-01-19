@@ -33,14 +33,5 @@ const PortfolioData = [
     demoLink: "https://yanal-sabbagh07.github.io/fittery/",
     githubLink: "https://github.com/Yanal-Sabbagh07/fittery",
   },
-
-  {
-    id: 5,
-    name: "Budgety",
-    description: "Budgety is a  web app build with vanilla javascript",
-    img: "assets/budgety.png",
-    demoLink: "https://yanal-sabbagh07.github.io/Budgety/",
-    githubLink: "https://github.com/Yanal-Sabbagh07/Budgety",
-  },
 ];
 export default PortfolioData;
