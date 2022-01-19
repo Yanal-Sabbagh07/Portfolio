@@ -19,19 +19,28 @@ const PortfolioData = [
   },
   {
     id: 3,
+    name: "Game Of Thrones",
+    description: "Got is a SPA built with React.js",
+    img: "assets/Got.png",
+    demoLink: "https://yanal-sabbagh07.github.io/Game-of-thrones/",
+    githubLink: "https://github.com/Yanal-Sabbagh07/Game-of-thrones",
+  },
+  {
+    id: 4,
+    name: "fittery",
+    description: "fittery is a SPA built with React.js",
+    img: "assets/fittery.png",
+    demoLink: "https://yanal-sabbagh07.github.io/fittery/",
+    githubLink: "https://github.com/Yanal-Sabbagh07/fittery",
+  },
+
+  {
+    id: 5,
     name: "Budgety",
     description: "Budgety is a  web app build with vanilla javascript",
     img: "assets/budgety.png",
     demoLink: "https://yanal-sabbagh07.github.io/Budgety/",
     githubLink: "https://github.com/Yanal-Sabbagh07/Budgety",
-  },
-  {
-    id: 4,
-    name: "fittery",
-    description: "Keeper is a cloe of google keep  build with React.js",
-    img: "assets/fittery.png",
-    demoLink: "https://yanal-sabbagh07.github.io/fittery/",
-    githubLink: "https://github.com/Yanal-Sabbagh07/fittery",
   },
 ];
 export default PortfolioData;
