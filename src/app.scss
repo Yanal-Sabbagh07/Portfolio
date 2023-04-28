@@ -1,23 +1,23 @@
-.app {
-  height: 100vh;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .sections {
+  overflow-x: hidden;
   width: 100%;
-  height: calc(100vh - 70px);
-  position: relative;
-  top: 70px;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scrollbar-width: none; // firefox
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  height: 100%;
+  margin-top: 0px;
 
   > * {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh);
   }
 }
