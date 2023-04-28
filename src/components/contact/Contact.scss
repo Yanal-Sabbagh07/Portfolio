@@ -1,7 +1,7 @@
 @import "../../global.scss";
 .contact {
   background-color: #fff;
-  //background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  height: 100vh;
   display: flex;
   @include Mobile {
     flex-direction: column;
