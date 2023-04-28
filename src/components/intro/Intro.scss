@@ -4,13 +4,13 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  // margin-top: 60px;
-
   align-items: center;
   justify-content: center;
   @include Mobile {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    // background-color: red;
   }
 
   .left {
@@ -22,7 +22,7 @@
     justify-content: center;
     @include Mobile {
       flex: 0.4;
-      margin-top: 60px;
+      margin-top: 80px;
       // background-color: red;
     }
 
@@ -49,7 +49,7 @@
     position: relative;
     @include Mobile {
       justify-content: flex-start;
-      flex: 0.55;
+      flex: 0.6;
     }
     .wrapper {
       width: 100%;
@@ -113,6 +113,7 @@
       color: $secondaryColor;
       @include Mobile {
         width: 100%;
+        bottom: 24px;
       }
     }
     @keyframes arrowBlink {
