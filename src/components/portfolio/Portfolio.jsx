@@ -23,7 +23,7 @@ const Portfolio = () => {
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe) {
-      setCurrentSlide(currentSlide < 5 ? currentSlide + 1 : 5);
+      setCurrentSlide(currentSlide < 4 ? currentSlide + 1 : 4);
       setDelay(500000);
     } else if (isRightSwipe) {
       setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 0);
@@ -50,11 +50,11 @@ const Portfolio = () => {
   const handleClick = (direction) => {
     setDelay(500000);
     direction === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
-      : setCurrentSlide(currentSlide < 3 ? currentSlide + 1 : 0);
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 4)
+      : setCurrentSlide(currentSlide < 4 ? currentSlide + 1 : 0);
   };
   useInterval(() => {
-    if (currentSlide < 5) {
+    if (currentSlide < 4) {
       setCurrentSlide(currentSlide + 1);
     } else {
       setCurrentSlide(0);
