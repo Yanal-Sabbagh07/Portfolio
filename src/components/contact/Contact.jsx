@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+
 import "./Contact.scss";
 
 const Contact = () => {
   const [msg, setMsg] = useState(false);
+  const form = useRef();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -11,10 +13,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_g33tvdo",
-        "template_44oxfbd",
+        process.env.REACT_APP_API_SERVICE_ID,
+        process.env.REACT_APP_API_TEMPLATE_ID,
         e.target,
-        "user_oFLqVYymdRpOyAFu08MbI"
+        process.env.REACT_APP_API_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -31,7 +33,7 @@ const Contact = () => {
       <div className="left"></div>
       <div className="right">
         <h2>Hire me</h2>
-        <form onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" placeholder="Name" name="name" />
           <input type="email" placeholder="Email" name="email" />
           <textarea placeholder="Message" name="message"></textarea>
