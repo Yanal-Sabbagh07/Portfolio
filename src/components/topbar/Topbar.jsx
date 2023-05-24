@@ -20,7 +20,7 @@ const Topbar = (props) => {
             {/* <Mail className="icon"/> */}
             <EmailIcon className="icon" />
 
-            <span>yanal.sabbagh27@gmail.com</span>
+            <span>yanal.o.sabbagh@gmail.com</span>
           </div>
         </div>
         <div className="right">
