@@ -7,7 +7,7 @@ const PortfolioData = [
 
     img: "zahnspange",
     demoLink: "https://zahnspange-charlottenburg.de/",
-    githubLink: "https://github.com/Yanal-Sabbagh07/currency",
+    githubLink: "https://github.com/Yanal-Sabbagh07/Zahnspange-charlottenburg",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const PortfolioData = [
     id: 5,
     name: "Natours",
     description:
-      "A pixel perfect landing page website, designed with figma and built with html and Sass for learning purpose.",
+      "A pixel perfect testing page website, designed with figma and built with html and Sass.",
     img: "natours",
     demoLink: "https://yanal-sabbagh07.github.io/Natours/",
     githubLink: "https://github.com/Yanal-Sabbagh07/Natours",
@@ -48,7 +48,7 @@ const PortfolioData = [
     id: 6,
     name: "Omnifood",
     description:
-      "A pixel perfect landing page website, designed with figma and built with html and css for learning purpose.",
+      "A pixel perfect testing page website, designed with figma and built with html and css.",
     img: "OmniFood",
     demoLink: "https://yanal-sabbagh07.github.io/Omnifood/",
     githubLink: "https://github.com/Yanal-Sabbagh07/Omnifood",
