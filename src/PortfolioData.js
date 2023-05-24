@@ -13,7 +13,7 @@ const PortfolioData = [
     id: 2,
     name: "Islamy",
     description:
-      "A single page Web Application that helps Muslims to figure out the prayer times by the city they live in, and give them a random verse of the Quran as a reminder every time open the App  ",
+      "A single page Web Application that helps Muslims to figure out the prayer times by the city they live in, and allow them to read, listen and learn the Quran in original and selected language.  ",
     img: "islamy",
     demoLink: "https://islamy.netlify.app/",
     githubLink: "https://github.com/Yanal-Sabbagh07/Read",
