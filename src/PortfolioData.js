@@ -15,8 +15,8 @@ const PortfolioData = [
     description:
       "A single page Web Application that helps Muslims to figure out the prayer times by the city they live in, and allow them to read, listen and learn the Quran in original and selected language.  ",
     img: "islamy",
-    demoLink: "https://islamy.netlify.app/",
-    githubLink: "https://github.com/Yanal-Sabbagh07/Read",
+    demoLink: "https://halal-corner.vercel.app",
+    githubLink: "https://github.com/Yanal-Sabbagh07/halal",
   },
   {
     id: 3,
